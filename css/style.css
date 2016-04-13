@@ -1,0 +1,27 @@
+body,div,ul,ol,li,input { margin: 0; padding: 0; }
+body { background-color: #eee; font-family: Arial; }
+ul { list-style: none; }
+input { border: none; outline: none; }
+header { width: 550px; text-align: center; margin: 0 auto; font-size: 50px; color: #bbb; }
+.content { position: relative; width: 550px; margin: 0 auto; box-shadow: 0 0 5px #000; }
+.add-area { border-top: 10px solid #977; }
+.add-area,.todo-item { position: relative; height: 59px; border-bottom: 1px dashed #888; }
+.add-left span { display: inline-block; font-size: 20px; transform: rotate(90deg); transition: all .2s; }
+.add-left,.complete-ctrl { position: absolute; color: #d3d3d3; font-weight: bolder; cursor: default; height: 59px; width: 39px; border-right: 1px solid #922; line-height: 59px; text-align: center; background-color: #fff; }
+.main { display: block; }
+.todo-content,.todo-change,.add-content { position: absolute; width: 500px; padding-left: 10px; right: 0; height: 59px; line-height: 59px; background-color: #fff; color: #4d4d4d; font-size: 20px; }
+.add-content,.add-left { background-color: #f5f5f5; }
+.todo-change { display: none; background-color: #eee; }
+.delete { position: absolute; font-size: 20px; color: #000; right: 20px; top: 10px; text-align: center; line-height: 40px; width: 40px; height: 40px; cursor: default; display: none; transition: all .4s; }
+.todo-item:hover .delete { display: block; }
+.delete:hover { font-size: 30px; }
+.done .complete-ctrl { color: #779977; }
+.done .todo-content { color: #a1a1a1; text-decoration: line-through; }
+.filter { width: 550px; margin: 0 auto; font-size: 12px; color: #83756f; line-height: 30px; background-color: #f7f7f7; }
+.num { position: absolute; padding-left: 10px; }
+.filter .f { text-align: center; }
+.filter span { display: inline-block; margin: 0 5px; cursor: pointer; }
+.filter .selected { font-weight: bold; }
+.description { text-align: center; color: #a1a1a1; font-size: 12px; line-height: 20px; }
+.move { animation: move .3s infinite alternate; color: #898 }
+@keyframes move{ from {transform: translateY(-5px) rotate(90deg)} to {transform: translateY(5px) rotate(90deg)}}
